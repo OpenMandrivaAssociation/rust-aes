@@ -1,0 +1,11 @@
+--- aes-0.3.2/Cargo.toml	1970-01-01T00:00:00+00:00
++++ aes-0.3.2/Cargo.toml	2019-05-05T13:10:58.972288+00:00
+@@ -25,8 +25,5 @@
+ [dev-dependencies.block-cipher-trait]
+ version = "0.6"
+ features = ["dev"]
+-[target."cfg(all(target_feature=\"aes\", target_feature = \"sse2\", any(target_arch = \"x86_64\", target_arch = \"x86\")))".dependencies.aesni]
+-version = "0.6"
+-default-features = false
+ [target."cfg(not(all(target_feature=\"aes\", target_feature = \"sse2\", any(target_arch = \"x86_64\", target_arch = \"x86\"))))".dependencies.aes-soft]
+ version = "0.3"
